@@ -1,0 +1,367 @@
+{% include "header.html" %}
+
+<!-- Page Header-->
+<header
+        class="masthead"
+        style="background-image: url('../static/assets/img/login-bg.jpg')"
+>
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="page-heading">
+                    <h1>What We Treat</h1>
+                    <span class="subheading">Wineba's first physiotherapy center .</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content-->
+<!-- Features section-->
+<section class="py-5 border-bottom" id="features">
+    <div class="container px-5 my-5">
+        <div class="row gx-5">
+            <!-- Product 1: Backpain Treatment -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/backpain_card.png') }}"
+                            alt="Back Pain Relief"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Back Pain</h4>
+                        <p class="card-text">
+                            A one-stop treatment for back pain of all sorts, our seasoned
+                            physiotherapists are always available to help.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 2: Neck pain Treatment -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/neckpain_card.png') }}"
+                            alt="Neck Pain Relief"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Neck Pain</h4>
+                        <p class="card-text">
+                            Our highly trained staff are equipped with state-of-the-art
+                            techniques and know-how to deal with neckpain.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 3: Shoulder pain -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/shoulderpain_card.png') }}"
+                            alt="Shoulder Pain Treatment"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Shoulder Pain</h4>
+                        <p class="card-text">
+                            Expert shoulder pain treatment using manual therapy, tailored
+                            exercises, and effective pain relief techniques.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 4: ACL Injury -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/aclinjury_card.png') }}"
+                            alt="ACL Injury"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">ACL Injury</h4>
+                        <p class="card-text">
+                            Specialized ACL injury treatment with focused rehabilitation,
+                            strengthening exercises, and supportive bracing for effective
+                            recovery.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 5: Foot and Ankle -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/footandankle_card.png') }}"
+                            alt="Foot and Ankle Treatment"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Feet & Ankles</h4>
+                        <p class="card-text">
+                            Comprehensive foot and ankle pain treatment with custom orthotics, targeted exercises, and
+                            therapeutic modalities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 6: Hip and Knee -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/hipandknee_card.png') }}"
+                            alt="Hip and Knee Pain Treatment"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Hip and Knee </h4>
+                        <p class="card-text">
+                            Effective hip and knee pain relief through targeted physiotherapy, strengthening exercises,
+                            and supportive braces.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 7: Knee, balance and walking -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/kneebalanceandwalking_card.png') }}"
+                            alt="Knee, Balance and Walking"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Knee, Balance & Walking</h4>
+                        <p class="card-text">
+                            Enhancing knee strength, balance, and walking ability with tailored therapy and progressive
+                            rehabilitation exercises.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 8: Dizziness and Vertigo -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/dizzinessandvertigo_card.png') }}"
+                            alt="Dizziness and Vertigo"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Dizziness & Vertigo </h4>
+                        <p class="card-text">
+                            Specialized treatment for dizziness and vertigo, focusing on balance rehabilitation and
+                            symptom management techniques.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 9: Chronic Pain -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/chronicpain_card.png') }}"
+                            alt="Chronic Pain Treatment and Management"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Chronic Pain</h4>
+                        <p class="card-text">
+                            Comprehensive chronic pain relief through personalized therapy, gentle techniques, and
+                            ongoing support for lasting comfort.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 10: Pediatric Physiotherapy -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/pediatricphysiotherapy_card.png') }}"
+                            alt="Pediatric Physiotherapy"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Pediatric Physiotherapy</h4>
+                        <p class="card-text">
+                            Specialized pediatric physiotherapy fostering child development, mobility, and strength in a
+                            nurturing, supportive environment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 11: Sciatica treatment -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/sciatica_card.png') }}"
+                            alt="Sciatica Treatment"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Sciatica Treatment </h4>
+                        <p class="card-text">
+                            Effective sciatica treatment with targeted exercises, manual therapy, and pain management
+                            for lasting relief.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 12: Headache Relief -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/headache_card.png') }}"
+                            alt="Headache Relief"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Headache Relief</h4>
+                        <p class="card-text">
+                            Comprehensive headache relief through gentle therapy, focusing on stress reduction,
+                            relaxation techniques, and pain management.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 13: Elbow, wrist and hand -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/elbowwristandhand_card.png') }}"
+                            alt="Elbow, wrist and hand"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Elbow, Wrist and Hand </h4>
+                        <p class="card-text">
+                            Expert treatment for elbow, wrist, and hand conditions using tailored exercises, bracing,
+                            and manual therapy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 14: Balance and Gait Disorders -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/balanceandgait_card.png') }}"
+                            alt="Balance and Gait"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Balance and Gait </h4>
+                        <p class="card-text">
+                            Tailored therapy for balance and gait disorders, enhancing stability and mobility through
+                            specialized exercises and techniques.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 15: Arthritis pain relief -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/arthritis_card.png') }}"
+                            alt="Arthritis Pain Relief"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Arthritis </h4>
+                        <p class="card-text">
+                            Comprehensive arthritis pain management with personalized exercises, joint care techniques,
+                            and pain relief therapies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 16: Motor-vehicle Accident Injuries -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/motoraccident_card.png') }}"
+                            alt="Motor Vehicle Accident Injuries"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Motor Vehicle Accident Injuries </h4>
+                        <p class="card-text">
+                            Specialized care for motor vehicle accident injuries with focused rehabilitation, pain
+                            management, and personalized therapy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+             <!-- Product 17: Work Injuries -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/workinjury_card.png') }}"
+                            alt="Work Injuries"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Work Injuries </h4>
+                        <p class="card-text">
+                            Effective treatment for work injuries, focusing on ergonomic recovery, pain relief, and functional rehabilitation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Product 18: Post-Surgical Rehabilitation -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/postsurgical_card.png') }}"
+                            alt="Post-Surgical Rehabilitation"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Post-Surgical Rehabilitation </h4>
+                        <p class="card-text">
+                            Comprehensive post-surgical rehabilitation focusing on restoring mobility, strength, and function for a complete recovery.
+                        </p>
+                    </div>
+                </div>
+            </div>
+              <!-- Product 19: Neurological Disorders -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/neurological_card.png') }}"
+                            alt="Neurological Disorders"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Neurological Disorders </h4>
+                        <p class="card-text">
+                            Advanced physiotherapy for neurological disorders, enhancing function, coordination, and neuroplasticity for improved quality of life
+                        </p>
+                    </div>
+                </div>
+            </div>
+             <!-- Product 20: Sports Injuries -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/sports_card.png') }}"
+                            alt="Sports Injuries"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Sports Injuries </h4>
+                        <p class="card-text">
+                            Expert sports injury rehabilitation, focusing on rapid recovery, strength restoration, and prevention of future injuries.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% include "footer.html" %}

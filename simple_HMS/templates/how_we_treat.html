@@ -1,0 +1,208 @@
+{% include "header.html" %}
+
+<!-- Page Header-->
+<header
+        class="masthead"
+        style="background-image: url('../static/assets/img/register-bg.jpg')"
+>
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="page-heading">
+                    <h1>How We Treat</h1>
+                    <span class="subheading">Wineba's first physiotherapy center .</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="py-5 border-bottom" id="features">
+<div class="container px-5 my-5">
+    <!-- First Row: 4 Cards -->
+    <div class="row gx-5">
+        <!-- Placeholder for 4 cards with col-lg-3 col-md-6 -->
+        <!-- Repeat this div block for each of the 4 cards -->
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img
+                        class="card-img-top"
+                        src="{{ url_for('static', filename='assets/img/features/electricalstimulation_card.png') }}"
+                        alt="Electrical Stimulation"
+                />
+                <div class="card-body">
+                    <h4 class="card-title">Electrical Stimulation </h4>
+                    <p class="card-text">
+                        Electrical stimulation aids recovery, enhances muscle function, and reduces pain for effective
+                        physiotherapy outcomes.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img
+                        class="card-img-top"
+                        src="{{ url_for('static', filename='assets/img/features/physicaltherapy_card.png') }}"
+                        alt="Physical Therapy"
+                />
+                <div class="card-body">
+                    <h4 class="card-title">Physical Therapy </h4>
+                    <p class="card-text">
+                        Physical therapy offers comprehensive rehabilitation with tailored exercises and advanced
+                        equipment to ensure recovery.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img
+                        class="card-img-top"
+                        src="{{ url_for('static', filename='assets/img/features/occupationaltherapy_card.png') }}"
+                        alt="Occupational therapy"
+                />
+                <div class="card-body">
+                    <h4 class="card-title">Occupational therapy </h4>
+                    <p class="card-text">
+                        Occupational therapy empowers functional independence through personalized activities and adaptive strategies for everyday challenges..
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img
+                        class="card-img-top"
+                        src="{{ url_for('static', filename='assets/img/features/therapeuticexercise_card.png') }}"
+                        alt="Therapeutic Exercise"
+                />
+                <div class="card-body">
+                    <h4 class="card-title">Therapeutic Exercise </h4>
+                    <p class="card-text">
+                        Therapeutic exercises tailored to enhance strength, flexibility, and mobility for optimal health and recovery.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Second Row: 4 Cards -->
+    <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img
+                        class="card-img-top"
+                        src="{{ url_for('static', filename='assets/img/features/IASTM_card.png') }}"
+                        alt="IASTM"
+                />
+                <div class="card-body">
+                    <h4 class="card-title">IASTM </h4>
+                    <p class="card-text">
+                        IASTM enhances tissue healing, promotes mobility, and relieves pain through targeted soft tissue
+                        therapy.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img
+                        class="card-img-top"
+                        src="{{ url_for('static', filename='assets/img/features/ultrasound_card.png') }}"
+                        alt="Ultrasound"
+                />
+                <div class="card-body">
+                    <h4 class="card-title">Ultrasound </h4>
+                    <p class="card-text">
+                        "Ultrasound therapy promotes tissue healing and pain relief, enhancing recovery through non-invasive sound waves.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img
+                        class="card-img-top"
+                        src="{{ url_for('static', filename='assets/img/features/ergonomictraining_card.png') }}"
+                        alt="Ergonomic Training"
+                />
+                <div class="card-body">
+                    <h4 class="card-title">Ergonomic Training </h4>
+                    <p class="card-text">
+                        Ergonomic training ensures a healthier work environment, reducing strain and enhancing productivity and comfort.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img
+                        class="card-img-top"
+                        src="{{ url_for('static', filename='assets/img/features/orthotics_card.png') }}"
+                        alt="Orthotics"
+                />
+                <div class="card-body">
+                    <h4 class="card-title">Orthotics </h4>
+                    <p class="card-text">
+                        Custom orthotics provide targeted support, improve alignment, and enhance comfort for effective physical therapy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Third Row: 3 Cards centered -->
+    <div class="row justify-content-center">
+        <!-- Repeat this div block for each of the 3 cards -->
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img
+                        class="card-img-top"
+                        src="{{ url_for('static', filename='assets/img/features/manualtherapy_card.png') }}"
+                        alt="Manual Therapy"
+                />
+                <div class="card-body">
+                    <h4 class="card-title">Manual Therapy </h4>
+                    <p class="card-text">
+                        Manual therapy optimizes joint mobility and muscle function, providing personalized hands-on
+                        care for pain relief.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img
+                        class="card-img-top"
+                        src="{{ url_for('static', filename='assets/img/features/therapeuticmassage_card.png') }}"
+                        alt="Therapeutic Massage"
+                />
+                <div class="card-body">
+                    <h4 class="card-title">Therapeutic Massage </h4>
+                    <p class="card-text">
+                        Therapeutic massage enhances healing, reduces muscle tension, and promotes relaxation for overall well-being.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img
+                        class="card-img-top"
+                        src="{{ url_for('static', filename='assets/img/features/vestibulartherapy_card.png') }}"
+                        alt="Vestibular therapy"
+                />
+                <div class="card-body">
+                    <h4 class="card-title">Vestibular therapy </h4>
+                    <p class="card-text">
+                        Vestibular therapy effectively treats balance disorders and dizziness, restoring equilibrium and enhancing stability.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+{% include "footer.html" %}

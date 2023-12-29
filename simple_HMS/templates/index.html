@@ -19,45 +19,159 @@
 <!-- Main Content-->
 <div class="container px-4 px-lg-5">
   <div class="row gx-4 gx-lg-5 justify-content-center">
-    <div class="col-md-10 col-lg-8 col-xl-7">
-      <!-- Post preview-->
-      {% for post in all_posts %}
-      <div class="post-preview">
-        <a href="{{ url_for('show_post', post_id=post.id) }}">
-          <h2 class="post-title">{{ post.title }}</h2>
-          <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-        </a>
-        <p class="post-meta">
-          Posted by
-          <!-- post.author.name is now a User object -->
-          <a href="#">{{post.author.name}}</a>
-          on {{post.date}}
-          <!-- Only show delete button if user id is 1 (admin user) -->
-          {% if current_user.id == 1: %}
-          <a href="{{url_for('delete_post', post_id=post.id) }}">✘</a>
-          {% endif %}
-        </p>
-      </div>
-      <!-- Divider-->
-      <hr class="my-4" />
-      {% endfor %}
+   <!-- What We Treat Section -->
+    <div class="container my-5">
+        <h2 class="text-center">What We Treat</h2><br/><br/>
+        <div class="row gx-5">
+           <!-- Product 1: Backpain Treatment -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/backpain_card.png') }}"
+                            alt="Back Pain Relief"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Back Pain</h4>
+                        <p class="card-text">
+                            A one-stop treatment for back pain of all sorts, our seasoned
+                            physiotherapists are always available to help.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 2: Neck pain Treatment -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/neckpain_card.png') }}"
+                            alt="Neck Pain Relief"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Neck Pain</h4>
+                        <p class="card-text">
+                            Our highly trained staff are equipped with state-of-the-art
+                            techniques and know-how to deal with neckpain.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 3: Shoulder pain -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/shoulderpain_card.png') }}"
+                            alt="Shoulder Pain Treatment"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Shoulder Pain</h4>
+                        <p class="card-text">
+                            Expert shoulder pain treatment using manual therapy, tailored
+                            exercises, and effective pain relief techniques.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 4: ACL Injury -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img
+                            class="card-img-top"
+                            src="{{ url_for('static', filename='assets/img/features/aclinjury_card.png') }}"
+                            alt="ACL Injury"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">ACL Injury</h4>
+                        <p class="card-text">
+                            Specialized ACL injury treatment with focused rehabilitation,
+                            strengthening exercises, and supportive bracing for effective
+                            recovery.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-      <!-- New Post -->
-      <!-- Only show Create Post button if user id is 1 (admin user) -->
-      {% if current_user.id == 1: %}
-      <div class="d-flex justify-content-end mb-4">
-        <a
-          class="btn btn-primary float-right"
-          href="{{url_for('add_new_post')}}"
-          >Create New Post</a
-        >
-      </div>
-      {% endif %}
+        </div>
+        <!-- Read More button for What We Treat -->
+        <div class="text-center mt-4">
+            <a href="{{ url_for('views.what_we_treat') }}" class="btn btn-secondary">Read More</a>
+        </div>
+    </div>
 
-      <!-- Pager-->
-      <div class="d-flex justify-content-end mb-4">
-        <a class="btn btn-secondary text-uppercase" href="#!">Older Posts →</a>
-      </div>
+    <!-- How We Treat Section -->
+    <div class="container my-5">
+        <h2 class="text-center">How We Treat</h2><br/><br/>
+        <div class="row gx-5">
+             <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img
+                        class="card-img-top"
+                        src="{{ url_for('static', filename='assets/img/features/electricalstimulation_card.png') }}"
+                        alt="Electrical Stimulation"
+                />
+                <div class="card-body">
+                    <h4 class="card-title">Electrical Stimulation </h4>
+                    <p class="card-text">
+                        Electrical stimulation aids recovery, enhances muscle function, and reduces pain for effective
+                        physiotherapy outcomes.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img
+                        class="card-img-top"
+                        src="{{ url_for('static', filename='assets/img/features/physicaltherapy_card.png') }}"
+                        alt="Physical Therapy"
+                />
+                <div class="card-body">
+                    <h4 class="card-title">Physical Therapy </h4>
+                    <p class="card-text">
+                        Physical therapy offers comprehensive rehabilitation with tailored exercises and advanced
+                        equipment to ensure recovery.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img
+                        class="card-img-top"
+                        src="{{ url_for('static', filename='assets/img/features/occupationaltherapy_card.png') }}"
+                        alt="Occupational therapy"
+                />
+                <div class="card-body">
+                    <h4 class="card-title">Occupational therapy </h4>
+                    <p class="card-text">
+                        Occupational therapy empowers functional independence through personalized activities and adaptive strategies for everyday challenges..
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img
+                        class="card-img-top"
+                        src="{{ url_for('static', filename='assets/img/features/therapeuticexercise_card.png') }}"
+                        alt="Therapeutic Exercise"
+                />
+                <div class="card-body">
+                    <h4 class="card-title">Therapeutic Exercise </h4>
+                    <p class="card-text">
+                        Therapeutic exercises tailored to enhance strength, flexibility, and mobility for optimal health and recovery.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <!-- Read More button for How We Treat -->
+        <div class="text-center mt-4">
+            <a href="{{ url_for('views.how_we_treat') }}" class="btn btn-secondary">Read More</a>
+        </div>
     </div>
   </div>
 </div>

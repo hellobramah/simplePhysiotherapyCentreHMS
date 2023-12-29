@@ -106,6 +106,14 @@ def delete_post(post_id):
     return redirect(url_for('get_all_posts'))
 
 
+# route to How we treat page
+@views.route("/how_we_treat")
+def how_we_treat():
+    return render_template("how_we_treat.html", current_user=current_user)
+# route to What we treat page
+@views.route("/what_we_treat")
+def what_we_treat():
+    return render_template("what_we_treat.html", current_user=current_user)
 # route to about page
 @views.route("/about")
 def about():
