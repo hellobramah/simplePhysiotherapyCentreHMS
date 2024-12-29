@@ -1,7 +1,8 @@
+---
 deployment:
   tasks:
+    - echo "Starting deployment tasks."
     - export DEPLOYMENT_DIR=$PWD
-    - echo "Deploying to: $DEPLOYMENT_DIR"
-    - source $VIRTUAL_ENV/bin/activate
-    - pip install -r requirements.txt
+    - echo "Deployment directory: $DEPLOYMENT_DIR"
+    - /home/$USER/virtualenv/seaside-hms/3.8/bin/pip install -r requirements.txt
     - touch tmp/restart.txt
