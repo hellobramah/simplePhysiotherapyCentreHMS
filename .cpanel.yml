@@ -1,0 +1,7 @@
+deployment:
+  tasks:
+    - export DEPLOYMENT_DIR=$PWD
+    - echo "Deploying to: $DEPLOYMENT_DIR"
+    - source $VIRTUAL_ENV/bin/activate
+    - pip install -r requirements.txt
+    - touch tmp/restart.txt
