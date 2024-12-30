@@ -18,7 +18,20 @@ def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = os.environ.get("FLASK_SECRET_KEY")
     #app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_LOCATION", "sqlite:///posts.db")
+
+    database_url = os.getenv('DATABASE_LOCATION')
+
+    if database_url:
+        app.config['SQLALCHEMY_DATABASE_URI'] = database_url
+    else:
+        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'
+
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    #app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_LOCATION", "sqlite:///posts.db")
+    #app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL", "sqlite:///posts.db")
+    #app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+
 
     #database.init_app(app)
     # Configure CKEditor
