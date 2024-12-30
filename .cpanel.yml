@@ -4,5 +4,7 @@ deployment:
     - echo "Starting deployment tasks."
     - export DEPLOYMENT_DIR=$PWD
     - echo "Deployment directory: $DEPLOYMENT_DIR"
-    - /home/$USER/virtualenv/repositories/simplePhysiotherapyCentreHMS/3.8/bin/pip install -r requirements.txt
+    - source /home/$USER/virtualenv/repositories/simplePhysiotherapyCentreHMS/3.8/bin/activate
+    - pip install -r requirements.txt
     - touch tmp/restart.txt
+    - echo "Deployment completed successfully."
