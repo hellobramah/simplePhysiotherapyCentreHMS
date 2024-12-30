@@ -1,9 +1,12 @@
-import imp
 import os
 import sys
 
+# Dynamically resolve the application path
+app_path = os.getenv('APP_PATH')
+if not app_path:
+    raise RuntimeError("Environment variable APP_PATH is not set.")
 
-sys.path.insert(0, os.path.dirname(__file__))
+sys.path.insert(0, app_path)
 
-wsgi = imp.load_source('wsgi', 'wsgi.py')
-application = wsgi.application
+# Load the application
+from main import app as application  # Ensure `main.py` contains your Flask app instance
